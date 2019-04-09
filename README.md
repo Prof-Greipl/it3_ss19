@@ -1,2 +1,5 @@
-# it3_ss19
-Dateien aus der IT3 Vorlesung
+# IT3 im SS 2019
+Hier finden sie Dateien aus der IT3 Vorlesung. 
+
+## Javascript
+Dateien zum Teil Javascript finden sie unter JS
