@@ -6,7 +6,7 @@ Dateien zum Teil Javascript finden sie im Verzeichnis  JS
 
 ### Entwickleroptionen im Browser einschalten
 
-`F12` in Chrome und auch in Firefox
+`F12` in Chrome und auch in Firefox. Unerlässlich für Fehlersuche und Verständnis!
 
 ### Variablen-Deklaration
 
