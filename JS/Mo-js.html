@@ -26,41 +26,97 @@
         }
     </style>
 </head>
-<body>
+<body id="bodi">
+    <h1 id="myTimer">10</h1>
     <div id="counter">0</div>
     <p id="intro">Unsere Spieler </p> <br>
 
     <p id="p1">Player 1: Chris </p>
     <p id="p2">Player 2: Anna </p>
 
+    <ol id="myList"></ol>
 
     <script>
-        let c = 10;
 
-        let counter = document.getElementById('counter');
+        console.log("Start des Scripts");
+
+        let timerWert;
+        timerWert = 10;
+        setTimeout(reduziereTimer, 1000);
+
+
+        let c; // Deklaration
+        c = 10; // Wertzuweisung
+
+        let counter;
+        counter = document.getElementById('counter');
         counter.textContent = c;
 
-        let intro = document.getElementById('intro');
+        let intro;
+        intro = document.getElementById('intro');
         intro.addEventListener('mouseenter', aendereIntroRot);
         intro.addEventListener('mouseleave', aendereIntroGelb);
 
-
-        let player = document.getElementById('p1');
+        let player;
+        player = document.getElementById('p1');
         player.addEventListener('click', aendereName1);
 
-        let player2 = document.getElementById('p2');
+        let player2;
+        player2 = document.getElementById('p2');
         player2.addEventListener('click', aendereName2);
 
+        function reduziereTimer() {
+            let timer = document.getElementById("myTimer");
+            timerWert = timerWert - 1;
+            timer.textContent = timerWert;
+
+            if (timerWert >= 1) {
+                setTimeout(reduziereTimer, 1000);
+            }
+            else {
+                console.log("Timer beendet");
+            }
+        }
+
+
         function aendereIntroRot() {
+            console.log(".. in aendereIntroRot ...");
+            intro.style.cssText = 'background-color:green';
             intro.className = "rot";
             c = c + 1;
             counter.textContent = c;
+
+            // Ergänze Eintrag in der Liste
+            let meineListe = document.getElementById("myList");
+            let absatz = document.createElement('li');
+            absatz.textContent = "Reingefahren :" + Date();
+            meineListe.appendChild(absatz);
+
+        }
+
+        function loescheMyList() {
+            // Aktuelle Liste löschen...
+            let meineListe = document.getElementById("myList");
+            let myBodi = document.getElementById("bodi");
+            myBodi.removeChild(meineListe);
+
+            // ... und neue, leere Liste erzeugen.
+            let neueListe = document.createElement('ol');
+            neueListe.setAttribute('id', 'myList');
+            myBodi.appendChild(neueListe);
         }
 
         function aendereIntroGelb() {
+            intro.style.cssText = 'font-size:12pt';
             intro.className = "gelb";
             c = c + 1;
             counter.textContent = c;
+
+            // Ergänze Eintrag in der Liste
+            let meineListe = document.getElementById("myList");
+            let absatz = document.createElement('li');
+            absatz.textContent = "Rausgefahren :" + Date();
+            meineListe.appendChild(absatz);
         }
 
 
@@ -69,6 +125,7 @@
             //name = prompt('Neuer Name');
             name = 'Greipl';
             player.textContent = 'Player 1 :' + name;
+            loescheMyList();
         }
 
         function aendereName2() {
@@ -77,7 +134,7 @@
             name = 'Greipl';
             player2.textContent = 'Player 2 :' + name;
         }
-
+        console.log("Ende des Scripts");
     </script>
 </body>
 </html>
