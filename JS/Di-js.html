@@ -1,0 +1,71 @@
+<html>
+<head>
+    <style>
+        p {
+            font-family: 'helvetica neue', helvetica, sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-align: center;
+            border: 2px solid rgba(0,0,200,0.6);
+            background: rgba(0,0,200,0.3);
+            color: rgba(0,0,200,0.6);
+            box-shadow: 1px 1px 2px rgba(0,0,200,0.4);
+            border-radius: 10px;
+            padding: 3px 10px;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .rot {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="header"> Spielerauswahl </div></br>
+    <p id="p1">Player 1: Chris</p><br>
+    <p id="p2">Player 2: Tom</p>
+    <script>
+        // Aufgabe: Beim Verlassen des Bereichs Spielerauswahl
+        // soll dieser eine  gelben Hintergrund haben.
+        // Hinweis: Event mouseleave
+        let kopf;
+        kopf = document.getElementById("header");
+
+        kopf.addEventListener('mouseenter', aendereKopfRot);
+
+        let player1;
+        player1 = document.getElementById("p1");
+        player1.addEventListener('click', aendereNameP1);
+
+        let player2;
+        player2 = document.getElementById("p2");
+        player2.addEventListener('click', aendereNameP2);
+
+        function aendereKopfRot() {
+            kopf.className = "rot";
+        }
+
+        function aendereNameP1() {
+            let name;
+            name = prompt("Neuer Name: ");
+            player1.textContent = "Player 1: " + name;
+        }
+
+        function aendereNameP2() {
+            let name;
+            name = prompt("Neuer Name: ");
+            player2.textContent = "Player 2: " + name;
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
