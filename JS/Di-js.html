@@ -19,23 +19,33 @@
         .rot {
             background-color: red;
         }
+
+        .gelb {
+            background-color: greenyellow;
+        }
+
     </style>
 </head>
 
-<body>
-
+<body id="bodi">
+    <h1 id="timer">0</h1>
     <div id="header"> Spielerauswahl </div></br>
     <p id="p1">Player 1: Chris</p><br>
     <p id="p2">Player 2: Tom</p>
+    <ol id="myList">
+    </ol>
+
     <script>
-        // Aufgabe: Beim Verlassen des Bereichs Spielerauswahl
-        // soll dieser eine  gelben Hintergrund haben.
-        // Hinweis: Event mouseleave
+        let c;
+        c = 0;
+        setTimeout(erhoeheTimer, 1000);
+
         let kopf;
         kopf = document.getElementById("header");
-
         kopf.addEventListener('mouseenter', aendereKopfRot);
+        kopf.addEventListener('mouseleave', aendereKopfGelb);
 
+        
         let player1;
         player1 = document.getElementById("p1");
         player1.addEventListener('click', aendereNameP1);
@@ -44,14 +54,58 @@
         player2 = document.getElementById("p2");
         player2.addEventListener('click', aendereNameP2);
 
-        function aendereKopfRot() {
-            kopf.className = "rot";
+        function erhoeheTimer() {
+            let timer;
+            timer = document.getElementById('timer');
+            c = c + 1;
+            timer.textContent = c;
+            setTimeout(erhoeheTimer, 1000);
         }
 
+        function aendereKopfRot() {
+            // Farbe auf rot setzen
+            kopf.className = "rot";
+
+            // Listeneintrag hinzufügen
+
+            // 1. Referenz auf die Liste holen
+            let meineListe;
+            meineListe = document.getElementById('myList');
+
+            // 2. Neuen Eintrag erzeugen
+            let eintrag;
+            eintrag = document.createElement('li');
+            eintrag.textContent = "Reingefahren : " + Date();
+
+            // 3. Neuen Eintrag an die Liste anhängen
+            meineListe.appendChild(eintrag);
+
+        }
+
+        function aendereKopfGelb() {
+            console.log("in der Funktion --gelb");
+            kopf.className = "helb";
+        }
+
+
         function aendereNameP1() {
-            let name;
-            name = prompt("Neuer Name: ");
-            player1.textContent = "Player 1: " + name;
+            player1.textContent = "Liste gelöscht! ";
+
+            // Löschen der Liste
+            let b;
+            b = document.getElementById("bodi");
+
+            let meineListe;
+            meineListe = document.getElementById('myList');
+
+            b.removeChild(meineListe);
+
+            // Leere Liste wiedererstellen
+            let leereListe;
+            leereListe = document.createElement('ol');
+            leereListe.setAttribute('id', 'myList');
+            b.appendChild(leereListe);
+
         }
 
         function aendereNameP2() {
