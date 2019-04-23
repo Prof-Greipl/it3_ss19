@@ -111,7 +111,7 @@ Ein neues HTML Element wird immer als *Child* eines existierenden Elementes erze
 
 ## Aufgabe zu HTML, CSS und Styles
 
-##### 1. Erzeugen Sie eine HTML Datei, die im Browser etwa wie folgt angezeigt wird:
+##### 1. Erzeugen Sie eine HTML Datei, die im Browser etwa wie folgt angezeigt wird (achten sie auf Abstände und Textgröße):
 
 ![2019-04-23_17-42-47](assets/2019-04-23_17-42-47.jpg)
 
@@ -121,5 +121,5 @@ Ein neues HTML Element wird immer als *Child* eines existierenden Elementes erze
 
 (Situation, nachdem in die Zelle 1 "gefahren" wurde).
 
-##### 2. Erweitern Sie die Datei so, dass eine Sekunde, nachdem eine Zelle scharz wurde, der Originalzustand (nach Schritt1) wieder hergestellt wird.
+##### 2. Erweitern Sie die Datei so, dass eine Sekunde, nachdem eine Zelle schwarz wurde, der Originalzustand (nach Schritt 1) wieder hergestellt wird.
 
