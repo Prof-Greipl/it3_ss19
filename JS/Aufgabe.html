@@ -3,12 +3,24 @@
    <title>JS Aufgabe</title> 
     <style>
     .cell {
-        background-color:lightblue;
-        width:100px;
-        font-size:18pt;
-        text-align:center;
-        padding-top:10px;
-        padding-bottom:10px;
+        background-color: lightblue;
+        width: 100px;
+        font-size: 18pt;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .cellEntered {
+        background-color: black;
+        color: white;
+        font-size: 18pt;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 100px;
+    }
+
     }
     </style>
 </head>
@@ -16,14 +28,43 @@
 <body>
     <table>
         <tr>
-            <td class="cell">1</td>
-            <td class="cell">2</td>
+            <td class="cell" id="cell11">1</td>
+            <td class="cell" id="cell12">2</td>
         </tr>
         <tr>
-            <td class="cell">3</td>
-            <td class="cell">4</td>
+            <td class="cell" id="cell21">3</td>
+            <td class="cell" id="cell22">4</td>
         </tr>
     </table>
+
+    <script>
+         let zelle11 = document.getElementById('cell11');
+         let zelle12 = document.getElementById('cell12');
+         let zelle21 = document.getElementById('cell21');
+         let zelle22 = document.getElementById('cell22');
+
+        zelle11.addEventListener('mouseenter', zelleSchwarz11);
+        zelle12.addEventListener('mouseenter', zelleSchwarz12);
+        zelle21.addEventListener('mouseenter', zelleSchwarz21);
+        zelle22.addEventListener('mouseenter', zelleSchwarz22);
+
+        function zelleSchwarz11() {
+            zelle11.className = "cellEntered";
+        }
+
+        function zelleSchwarz12() {
+            zelle12.className = "cellEntered";
+        }
+
+        function zelleSchwarz21() {
+            zelle21.className = "cellEntered";
+        }
+
+        function zelleSchwarz22() {
+            zelle22.className = "cellEntered";
+        }
+
+    </script>
 </body>
 </html>
 
