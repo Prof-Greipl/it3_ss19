@@ -106,3 +106,20 @@ Achtung: Die Klasse muss CSS Teil angegeben sein. Beispiel:
 #### HTML Element erzeugen
 
 Ein neues HTML Element wird immer als *Child* eines existierenden Elementes erzeugt. 
+
+
+
+## Aufgabe zu HTML, CSS und Styles
+
+##### 1. Erzeugen Sie eine HTML Datei, die im Browser etwa wie folgt angezeigt wird:
+
+![2019-04-23_17-42-47](assets/2019-04-23_17-42-47.jpg)
+
+##### 2. Erweitern Sie die Datei um einen Javascript Anteil, so dass durch "Hineinfahren" in einen der vier Bereiche die Hintergrundfarbe dieses Bereiches auf Schwarz wechselt und der Text weiﬂ dargestellt wird.
+
+![2019-04-23_17-57-35](assets/2019-04-23_17-57-35.jpg)
+
+(Situation, nachdem in die Zelle 1 "gefahren" wurde).
+
+##### 2. Erweitern Sie die Datei so, dass eine Sekunde, nachdem eine Zelle scharz wurde, der Originalzustand (nach Schritt1) wieder hergestellt wird.
+
