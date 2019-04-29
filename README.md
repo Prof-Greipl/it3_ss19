@@ -8,7 +8,7 @@ Dateien zum Teil Javascript finden sie im Verzeichnis  JS
 
 `F12` in Chrome und auch in Firefox. Unerlδsslich fόr Fehlersuche und Verstδndnis!
 
-#### Variablen-Deklaration
+#### 1. Variablen-Deklaration
 
 Variablen sind Container fόr Werte.  Variablen mόssen deklariert werden, d.h. der Name der Variable muss mit Javascript vereinbart werden. Schlόsselwort ``let``
 
@@ -16,7 +16,7 @@ Variablen sind Container fόr Werte.  Variablen mόssen deklariert werden, d.h. 
  let timerWert;
 ```
 
-#### Wertzuweisung
+#### 2. Wertzuweisung
 
 Einer Variable, also einem Container, wird ein Wert zugewiesen. Die Variable muss einer vorhergehenden Zeile deklariert sein.
 
@@ -24,7 +24,7 @@ Einer Variable, also einem Container, wird ein Wert zugewiesen. Die Variable mus
  timerWert = 10;
 ```
 
-#### Funktions-Deklaration
+#### 3. Funktions-Deklaration
 
 Funktionen sind ein Grundbaustein in JavaScript. Eine Funktion ist eine Prozedur - eine Reihe von Anweisungen, um eine Aufgabe auszufόhren oder eine Wert auszurechnen. Um eine Funktion zu verwenden, musse Sie vorher ebenfalls deklariert werden. Dies erfolgt mit dem Schlόsselwort `function`
 
@@ -35,7 +35,7 @@ Funktionen sind ein Grundbaustein in JavaScript. Eine Funktion ist eine Prozedur
         player1.textContent = "Player 1: " + name;
     }
 ```
-#### Funktionsaufruf
+#### 4. Funktionsaufruf
 
 Das Definieren einer Funktion fόhrt diese noch nicht aus. Die Definition gibt der Funktion lediglich einen Namen und beschreibt was geschehen soll, wenn die Funktion aufgerufen wird. Erst der **Aufruf** ermφglicht es, die Aktionen auszufόhren.  Funktionen kφnnen in anderen Funktionen aufgerufen werden.
 
@@ -55,7 +55,7 @@ Die Funktion darf nicht deklariert werden. Sie gibt den Text in den Klammern in 
 
 
 
-#### Zugriff auf einer Element des Dokumentenbaums (Elementreferenz)
+#### 5. Zugriff auf einer Element des Dokumentenbaums (Elementreferenz)
 
 Achtung; Die Variable muss vorher deklariert werden.
 
@@ -71,7 +71,7 @@ Im Html-Text muss sich ein Element mit dieser Id finden, zum Beispiel:
 <p id="p1">Player 1: Chris</p><br>
 ...
 ```
-#### Eventlistener hinzufόgen
+#### 6. Eventlistener hinzufόgen
 
 ```js
 player1 = document.getElementById("p1");
@@ -84,13 +84,13 @@ Events:
 click, mouseenter, mouseleave
 ```
 
-#### Setzen des Textinhaltes eines Elementes
+#### 7. Setzen des Textinhaltes eines Elementes
 
 ```js
 player1.textContent = "Player 1: Huber";
 ```
 
-#### Definieren einer Klasse fόr ein Element
+#### 8. Definieren einer Klasse für ein Element
 
 ```js
  player1.className = "rot";
@@ -105,7 +105,7 @@ Achtung: Die Klasse muss CSS Teil angegeben sein. Beispiel:
 ```
 
 
-#### HTML Element erzeugen
+#### 9. HTML Element erzeugen
 
 Ein neues HTML Element wird immer als *Child* eines bereits existierenden Elementes erzeugt. Folgende Programmzeilen hängen eine neues *Child*  - in diesem Fall einene neuen li-Eintrag - an die Liste `meineListe`  an. Der Eintrag ist zuerst leer, deshalb fügen wir mit `absatz.textContent` einen Text hinzu.
 
@@ -118,9 +118,9 @@ Ein neues HTML Element wird immer als *Child* eines bereits existierenden Elemen
 
 
 
-#### HTML Element löschen
+#### 10. HTML Element löschen
 
-Ein existierendes HTML Element wird immer als *Child* eines existierenden Elementes gelöscht. In nachfolgendem Beispiel ist  `myBodi` das exisitierende Element, das ein Child `meineListe` besitzt Die letzte Zeile löscht dann dieses Child. 
+Ein existierendes HTML Element wird immer als *Child* eines existierenden Elementes gelöscht. In nachfolgendem Beispiel ist  `myBodi` das exisitierende Element, das ein Child `meineListe` besitzt. Die letzte Zeile löscht dieses Child. 
 
 ```javascript
 let meineListe = document.getElementById("myList");
@@ -130,7 +130,7 @@ myBodi.removeChild(meineListe);
 
 
 
-#### Attribut setzen
+#### 11. Attribut setzen
 
 Mit `setAttribute` lässt sich zu einem Element ein Attribut setzten.
 
@@ -138,6 +138,53 @@ Mit `setAttribute` lässt sich zu einem Element ein Attribut setzten.
 let neueListe = document.createElement('ol');
 neueListe.setAttribute('id', 'myList');
 ```
+
+
+
+#### 12. Bedingte Ausführung (if-then-else)
+
+Einzelen Programmzeilen können in Abhängigkeit von einem logischen Ausdruck ausgeführt (oder eben nicht ausgeführt) werden. Wenn die Bedingung `sekunden > 0` erfüllt ist, (also der Wert der Variable sekunde ist größer 0 ist), werden die Befehle in der ersten geschweiften Klammer ausgeführt, andernfalls die Befehle in den geschweiften Klammern nach  `else`.
+
+```javascript
+if (sekunden > 0) 
+{
+  sekunden = sekunden - 1;
+  element.textContent = sekunden;
+  setTimeout( nachEinerSekunde, 1000);
+}
+else 
+{
+   clearInterval();
+}
+```
+
+
+
+#### 13. Wert eines Eingabefeldes lesen und setzen
+
+Wenn im HTML-Text ein Eingabefeld mit einer Id notiert ist. Kann der aktuelle Wert des Eingabefeldes in Javascript abgerufen werden. Beispiel:
+
+HTML:
+
+```html
+<input type="text" id="z1">
+```
+
+Javascript:
+
+```javascript
+ let feld1 = document.getElementById('z1');
+ let wert  = parseInt(feld1.value)
+```
+
+Der Wert kann auch gesetzt werden:
+
+```javascript
+feld1.value = "20";
+```
+
+
+
 
 
 ## Aufgabe zu HTML, CSS und Styles
