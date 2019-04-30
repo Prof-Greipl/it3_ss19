@@ -172,9 +172,14 @@ else
 }
 ```
 
+#### 13. Timer
+Beispiel:
+```
+setTimeout( zurueck2, 1000);
+```
 
 
-#### 13. Wert eines Eingabefeldes lesen und setzen
+#### 14. Wert eines Eingabefeldes lesen und setzen
 
 Wenn im HTML-Text ein Eingabefeld mit einer `id` notiert ist, kann der aktuelle Wert des Eingabefeldes in Javascript abgerufen werden. Beispiel:
 
