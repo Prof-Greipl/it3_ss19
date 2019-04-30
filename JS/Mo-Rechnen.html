@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>Aufgabe Gruppe Montag</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+    <input type="text" id="z1" /> <br />
+    + <br />
+    <input type="text" id="z2" /> <br />
+    <hr />
+    <div id="er">Ergebnis = </div>
+    <div id="re">Rechne</div>
+    <script>
+        let z1, z2, er, re
+        z1 = document.getElementById("z1");
+        z2 = document.getElementById("z2");
+        er = document.getElementById("er");
+        re = document.getElementById("re");
+
+        z1.value = "10";
+        z2.value = "20";
+
+        re.addEventListener('click', rechne);
+
+
+        function rechne() {
+            let result;
+            result = parseInt(z1.value) + parseInt(z2.value);
+            er.textContent = result;
+        }
+    </script>
+</body>
+
+</html>

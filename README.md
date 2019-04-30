@@ -1,4 +1,4 @@
-# IT3 im SS 2019
+﻿# IT3 im SS 2019
 Hier finden sie Dateien aus der IT3 Vorlesung. 
 
 ## Javascript
@@ -6,11 +6,11 @@ Dateien zum Teil Javascript finden sie im Verzeichnis  JS
 
 #### Entwickleroptionen im Browser einschalten
 
-`F12` in Chrome und auch in Firefox. Unerl�sslich f�sr Fehlersuche und Verst�ndnis!
+`F12` in Chrome und auch in Firefox. Unerlässlich für Fehlersuche und Verständnis!
 
 #### 1. Variablen-Deklaration
 
-Variablen sind Container fόr Werte.  Variablen mόssen deklariert werden, d.h. der Name der Variable muss mit Javascript vereinbart werden. Schlόsselwort ``let``
+Variablen sind Container für Werte.  Variablen müssen deklariert werden, d.h. der Name der Variable muss mit Javascript vereinbart werden. Schlüsselwort ``let``
 
 ```js
  let timerWert;
@@ -26,7 +26,7 @@ Einer Variable, also einem Container, wird ein Wert zugewiesen. Die Variable mus
 
 #### 3. Funktions-Deklaration
 
-Funktionen sind ein Grundbaustein in JavaScript. Eine Funktion ist eine Prozedur - eine Reihe von Anweisungen, um eine Aufgabe auszufόhren oder eine Wert auszurechnen. Um eine Funktion zu verwenden, musse Sie vorher ebenfalls deklariert werden. Dies erfolgt mit dem Schlόsselwort `function`
+Funktionen sind ein Grundbaustein in JavaScript. Eine Funktion ist eine Prozedur - eine Reihe von Anweisungen, um eine Aufgabe auszuführen oder eine Wert auszurechnen. Um eine Funktion zu verwenden, musse Sie vorher ebenfalls deklariert werden. Dies erfolgt mit dem Schlüsselwort `function`
 
 ```js
   function aendereNameP1() {
@@ -37,9 +37,9 @@ Funktionen sind ein Grundbaustein in JavaScript. Eine Funktion ist eine Prozedur
 ```
 #### 4. Funktionsaufruf
 
-Das Definieren einer Funktion fόhrt diese noch nicht aus. Die Definition gibt der Funktion lediglich einen Namen und beschreibt was geschehen soll, wenn die Funktion aufgerufen wird. Erst der **Aufruf** ermφglicht es, die Aktionen auszufόhren.  Funktionen kφnnen in anderen Funktionen aufgerufen werden.
+Das Definieren einer Funktion führt diese noch nicht aus. Die Definition gibt der Funktion lediglich einen Namen und beschreibt was geschehen soll, wenn die Funktion aufgerufen wird. Erst der **Aufruf** ermφglicht es, die Aktionen auszuführen.  Funktionen kφnnen in anderen Funktionen aufgerufen werden.
 
-Beispiel fόr Funktionsaufruf:
+Beispiel für Funktionsaufruf:
 
 ```js
 aendereName()
@@ -71,7 +71,7 @@ Im Html-Text muss sich ein Element mit dieser Id finden, zum Beispiel:
 <p id="p1">Player 1: Chris</p><br>
 ...
 ```
-#### 6. Eventlistener hinzufόgen
+#### 6. Eventlistener hinzufügen
 
 ```js
 player1 = document.getElementById("p1");

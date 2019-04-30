@@ -1,0 +1,90 @@
+<html>
+<head>
+    <title>Aufgabe Gruppe Montag</title>
+    <style>
+	.cell {
+	    color:black;
+		font-size:18pt;
+		width:100px;
+		background-color:lightblue;
+		text-align:center;
+		padding-top:15px;
+		padding-bottom:15px;
+		
+	}
+	
+	.blackCell {
+	    color:white;
+		font-size:18pt;
+		width:100px;
+		background-color:black;
+		text-align:center;
+		padding-top:15px;
+		padding-bottom:15px;
+		
+	}
+    </style>
+</head>
+<body >
+
+    <table>
+		<tr>
+		   <td class="cell" id="z11">1</td>
+		   <td class="cell" id="z12">2</td>
+		</tr>
+		<tr>
+		   <td class="cell" id="z21">3</td>
+		   <td class="cell" id="z22">4</td>
+		</tr>
+	</table>
+    <script>
+	    let zelle1, zelle2, zelle3, zelle4;
+		zelle1 = document.getElementById("z11");
+		zelle2 = document.getElementById("z12");
+		zelle3 = document.getElementById("z21");
+		zelle4 = document.getElementById("z22");
+		
+		zelle1.addEventListener("mouseenter", aendereZelle1);
+		zelle2.addEventListener("mouseenter", aendereZelle2);
+		zelle3.addEventListener("mouseenter", aendereZelle3);
+		zelle4.addEventListener("mouseenter", aendereZelle4);
+		
+		
+		function aendereZelle1(){
+		     zelle1.className="blackCell";
+			 setTimeout( zurueck1, 1000);
+		}
+		
+		function aendereZelle2(){
+		     zelle2.className="blackCell";
+			 setTimeout( zurueck2, 1000);
+		}
+		
+		function aendereZelle3(){
+		     zelle3.className="blackCell";
+			 setTimeout( zurueck3, 1000);
+		}
+		
+		function aendereZelle4(){
+		     zelle4.className="blackCell";
+			 setTimeout( zurueck4, 1000);
+		}
+		
+		function zurueck1(){
+		    zelle1.className = "cell";
+		}
+		
+		function zurueck2(){
+		    zelle2.className = "cell";
+		}
+		
+		function zurueck3(){
+		    zelle3.className = "cell";
+		}
+		
+		function zurueck4(){
+		    zelle4.className = "cell";
+		}
+    </script>
+</body>
+</html>
