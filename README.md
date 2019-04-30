@@ -8,13 +8,19 @@ Dateien zum Teil Javascript finden sie im Verzeichnis  JS
 
 `F12` in Chrome und auch in Firefox. Unerlässlich für Fehlersuche und Verständnis!
 
+
+
 #### 1. Variablen-Deklaration
 
-Variablen sind Container für Werte.  Variablen müssen deklariert werden, d.h. der Name der Variable muss mit Javascript vereinbart werden. Schlüsselwort ``let``
+Variablen sind Container für Werte.  Variablen müssen deklariert werden, d.h. der Name der Variable muss mit Javascript *vereinbart* werden. 
+
+>  Hinweis: Ohne Deklaration wird zwar kein Fehler gemeldet, aber das Verhalten ist für einen Anfänger schwer nachvollziehbar. Deshalb: immer deklarieren!
 
 ```js
  let timerWert;
 ```
+
+
 
 #### 2. Wertzuweisung
 
@@ -23,6 +29,8 @@ Einer Variable, also einem Container, wird ein Wert zugewiesen. Die Variable mus
 ```js
  timerWert = 10;
 ```
+
+
 
 #### 3. Funktions-Deklaration
 
@@ -35,9 +43,11 @@ Funktionen sind ein Grundbaustein in JavaScript. Eine Funktion ist eine Prozedur
         player1.textContent = "Player 1: " + name;
     }
 ```
+
+
 #### 4. Funktionsaufruf
 
-Das Definieren einer Funktion führt diese noch nicht aus. Die Definition gibt der Funktion lediglich einen Namen und beschreibt was geschehen soll, wenn die Funktion aufgerufen wird. Erst der **Aufruf** ermφglicht es, die Aktionen auszuführen.  Funktionen kφnnen in anderen Funktionen aufgerufen werden.
+Das Definieren einer Funktion führt diese noch nicht aus. Die Definition gibt der Funktion lediglich einen Namen und beschreibt was geschehen soll, wenn die Funktion aufgerufen wird. Erst der **Aufruf** ermöglicht es, die Aktionen auszuführen.  Funktionen können in anderen Funktionen aufgerufen werden.
 
 Beispiel für Funktionsaufruf:
 
@@ -51,7 +61,7 @@ EIn spezieller Funktionsaufruf ist
 console.log("Test");
 ```
 
-Die Funktion darf nicht deklariert werden. Sie gibt den Text in den Klammern in der Konsole aus.
+Diese  Funktion ist Teil von Javascript und darf/muss nicht deklariert werden. Sie gibt den Text in den Klammern in der Konsole aus.
 
 
 
@@ -65,12 +75,14 @@ Achtung; Die Variable muss vorher deklariert werden.
 
 Im Html-Text muss sich ein Element mit dieser Id finden, zum Beispiel:
 
-```hmtl
+```html
 ...
 <div id="header"> Spielerauswahl </div></br>
 <p id="p1">Player 1: Chris</p><br>
 ...
 ```
+
+
 #### 6. Eventlistener hinzufügen
 
 ```js
@@ -84,11 +96,15 @@ Events:
 click, mouseenter, mouseleave
 ```
 
+
+
 #### 7. Setzen des Textinhaltes eines Elementes
 
 ```js
 player1.textContent = "Player 1: Huber";
 ```
+
+
 
 #### 8. Definieren einer Klasse für ein Element
 
@@ -143,7 +159,7 @@ neueListe.setAttribute('id', 'myList');
 
 #### 12. Bedingte Ausführung (if-then-else)
 
-Einzelen Programmzeilen können in Abhängigkeit von einem logischen Ausdruck ausgeführt (oder eben nicht ausgeführt) werden. Wenn die Bedingung `sekunden > 0` erfüllt ist, (also der Wert der Variable sekunde ist größer 0 ist), werden die Befehle in der ersten geschweiften Klammer ausgeführt, andernfalls die Befehle in den geschweiften Klammern nach  `else`.
+Einzelne Programmzeilen können in Abhängigkeit von einem logischen Ausdruck ausgeführt werden. Wenn die Bedingung `sekunden > 0` erfüllt ist (also der Wert der Variable `sekunde` ist größer 0 ist), werden die Befehle im ersten geschweiften Klammernpaar ausgeführt, andernfalls die Befehle in den geschweiften Klammern nach  `else`.
 
 ```javascript
 if (sekunden > 0) 
@@ -162,7 +178,7 @@ else
 
 #### 13. Wert eines Eingabefeldes lesen und setzen
 
-Wenn im HTML-Text ein Eingabefeld mit einer Id notiert ist. Kann der aktuelle Wert des Eingabefeldes in Javascript abgerufen werden. Beispiel:
+Wenn im HTML-Text ein Eingabefeld mit einer `id` notiert ist, kann der aktuelle Wert des Eingabefeldes in Javascript abgerufen werden. Beispiel:
 
 HTML:
 
@@ -174,8 +190,10 @@ Javascript:
 
 ```javascript
  let feld1 = document.getElementById('z1');
- let wert  = parseInt(feld1.value)
+ let wert  = feld1.value
 ```
+
+Auchtung: Es wird immer eine Zeichkette eingelesen. Zu Umwandlung einer Zeichenkette in eine ganze Zahl wird die Funktion `parseInt()` verwendet.
 
 Der Wert kann auch gesetzt werden:
 
@@ -189,11 +207,11 @@ feld1.value = "20";
 
 ## Aufgabe zu HTML, CSS und Styles
 
-##### 1. Erzeugen Sie eine HTML Datei, die im Browser etwa wie folgt angezeigt wird (achten sie auf Abstδnde und Textgrφίe):
+##### 1. Erzeugen Sie eine HTML Datei, die im Browser etwa wie folgt angezeigt wird (achten sie auf Abstδnde und Textgröße):
 
 ![2019-04-23_17-42-47](assets/2019-04-23_17-42-47.jpg)
 
-##### 2. Erweitern Sie die Datei um einen Javascript Anteil, so dass durch "Hineinfahren" in einen der vier Bereiche die Hintergrundfarbe dieses Bereiches auf Schwarz wechselt und der Text weiί dargestellt wird.
+##### 2. Erweitern Sie die Datei um einen Javascript Anteil, so dass durch "Hineinfahren" in einen der vier Bereiche die Hintergrundfarbe dieses Bereiches auf Schwarz wechselt und der Text weiß dargestellt wird.
 
 ![2019-04-23_17-57-35](assets/2019-04-23_17-57-35.jpg)
 
