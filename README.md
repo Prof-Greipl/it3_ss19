@@ -216,5 +216,5 @@ feld1.value = "20";
 
 (Situation, nachdem in die Zelle 1 "gefahren" wurde).
 
-##### 2. Erweitern Sie die Datei so, dass eine Sekunde, nachdem eine Zelle schwarz wurde, der Originalzustand (nach Schritt 1) wieder hergestellt wird.
+##### 2. Erweitern Sie die Datei so, dass eine Sekunde, nachdem eine Zelle schwarz wurde, der Originalzustand der Zelle wieder hergestellt wird.
 
