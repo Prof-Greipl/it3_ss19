@@ -61,13 +61,11 @@ EIn spezieller Funktionsaufruf ist
 console.log("Test");
 ```
 
-Diese  Funktion ist Teil von Javascript und darf/muss nicht deklariert werden. Sie gibt den Text in den Klammern in der Konsole aus.
+Diese  Funktion ist Teil von Javascript und darf/muss nicht deklariert werden. Sie gibt den Text in den Klammern  aus.
 
 
 
 #### 5. Zugriff auf einer Element des Dokumentenbaums (Elementreferenz)
-
-Achtung; Die Variable muss vorher deklariert werden.
 
 ```js
   kopf = document.getElementById("header");
@@ -204,8 +202,9 @@ feld1.value = "20";
 
 
 
+<br>
 
-## Aufgabe zu HTML, CSS und Styles
+## Aufgabe 1 zu HTML, CSS und Styles
 
 ##### 1. Erzeugen Sie eine HTML Datei, die im Browser etwa wie folgt angezeigt wird (achten sie auf Abstδnde und Textgröße):
 
