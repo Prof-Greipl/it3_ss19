@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>
+        Rechnen am Dienstag
+    </title>
+</head>
+<body>
+    <input type="text" id="z1" /><br />
+    +  <br />
+    <input type="text" id="z2" /><br />
+    <div id="er">Ergebnis: ____</div> <br />
+    <div id="re">Rechnen</div>
+
+    <script>
+     
+        let z1 = document.getElementById("z1");
+        let z2 = d-Boocument.getElementById("z2");
+        let er = document.getElementById("er");
+        let re = document.getElementById("re");
+
+        // Listener zum Rechnen
+        re.addEventListener('click', rechne);
+
+        // Funktion zum Rechnen
+        function rechne() {
+            let result = parseInt(z1.value) + parseInt(z2.value);
+            er.textContent = result;
+        }
+
+    </script>
+</body>
+
+</html>
