@@ -1,4 +1,4 @@
-﻿# IT3 im SS 2020
+﻿# IT3 Teil Javascript im SS 2020
 Hier finden sie Dateien aus der IT3 Vorlesung. 
 
 ## Javascript
